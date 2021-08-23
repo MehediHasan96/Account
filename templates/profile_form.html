@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %} Update Profile {% endblock %}
+{% block body_block %}
+
+<ul class="messages">
+  {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+  {% endfor %}
+</ul>
+
+
+<form method="POST" class="mt-5">
+  {{form|crispy}}
+  {% csrf_token %}
+  <button type="submit" class="btn btn-success btn-sm">Save</button>
+  </form>
+  <br>
+  <br>
+{% endblock %}

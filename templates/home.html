@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title_block %} Home {% endblock %}
+{% block body_block %}
+<div class="mt-5 text-center">
+    <h1>User Details</h1>
+    <hr>
+    <br>
+ 
+<p>Name: {{data.full_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Phone: {{ data.phone }}</p>
+<p>Address: {{ data.address }}</p>
+<p>City: {{ data.city }}</p>
+<p>Zip Code: {{ data.zipcode }}</p>
+<p>Country: {{ data.country }}</p>
+
+</div>
+{% endblock %}
